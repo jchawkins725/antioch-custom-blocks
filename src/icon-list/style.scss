@@ -1,0 +1,154 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ .wp-block-antioch-custom-blocks-icon-list {
+	padding: 80px 0px;
+ }
+.wp-block-antioch-custom-blocks-icon-list .container {
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 100%;
+}
+.wp-block-antioch-custom-blocks-icon-list .container a {
+	width: 100%;
+	cursor: pointer;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.wp-block-antioch-custom-blocks-icon-list .container a:nth-of-type(n + 2) {
+	margin-top: 40px;
+}
+.wp-block-antioch-custom-blocks-icon-list .container a:hover {
+	text-decoration: none;
+	background: none;
+}
+.wp-block-antioch-custom-blocks-icon-list .container .img-container {
+	width: 100%;
+	height: 65vw;
+	overflow: hidden;
+}
+.wp-block-antioch-custom-blocks-icon-list .container h3 {
+	font-size: 24px;
+}
+.wp-block-antioch-custom-blocks-icon-list-inner {
+	display: flex;
+}
+.wp-block-antioch-custom-blocks-icon-list-inner .icon-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100px;
+}
+.wp-block-antioch-custom-blocks-icon-list-inner .icon-container [class*='fa'] {
+	width: 55px;
+	font-size: 55px;
+}
+.wp-block-antioch-custom-blocks-icon-list-inner [class*='fa']:after {
+	opacity: .5;
+}
+.wp-block-antioch-custom-blocks-icon-list-inner i, .wp-block-antioch-custom-blocks-icon-list-inner svg {
+	transition: all .4s;
+}
+.wp-block-antioch-custom-blocks-icon-list-inner:hover [class*='fa'] {
+	filter: brightness(85%);
+	transition: all .4s;
+}
+.wp-block-antioch-custom-blocks-icon-list-inner .content {
+	margin-left: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	width: 75%;
+}
+.wp-block-antioch-custom-blocks-icon-list-inner .content h3 {
+	line-height: 1em;
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+@media (min-width: 600px) {
+	.wp-block-antioch-custom-blocks-icon-list-inner .icon-container [class*='fa'] {
+		width: 55px;
+		font-size: 55px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list-inner .icon-container {
+		max-width: 120px;
+	}
+}
+@media (min-width: 900px) {
+	.wp-block-antioch-custom-blocks-icon-list .container a {
+		width: calc(50% - 20px)
+	}
+	.wp-block-antioch-custom-blocks-icon-list .container a:nth-of-type(n + 2) {
+		margin-top: 0px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list .container a:nth-of-type(n + 3) {
+		margin-top: 40px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list .container a:nth-of-type(2n) {
+		margin-left: 40px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list .container .img-container {
+		height: 30vw;
+		max-height: 360px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list .container .img-container:hover img {
+		-ms-transform: scale(1.05);
+		transform: scale(1.05);
+		transition: all .4s;
+	}
+	.wp-block-antioch-custom-blocks-icon-list .container img {
+		transition: all .4s;
+	}
+}
+@media (min-width: 1100px) {
+	.wp-block-antioch-custom-blocks-icon-list.third .container a {
+		width: calc(100% * 0.33333 - 80px * 0.33333);
+	}
+	.wp-block-antioch-custom-blocks-icon-list.third .container a:nth-of-type(n + 2) {
+		margin-top: 0px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list.third .container .img-container {
+		height: 22vw;
+		max-height: 275px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list.third .container a:nth-of-type(2n) {
+		margin-left: 0px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list.third .container a:nth-of-type(3n), .wp-block-antioch-custom-blocks-icon-list.third .container a:nth-of-type(3n - 1) {
+		margin-left: 40px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list.third .container a:nth-of-type(n + 4) {
+		margin-top: 40px;
+	}
+}
+@media (min-width: 1280px) {
+	.wp-block-antioch-custom-blocks-icon-list.quarter .container a {
+		width: calc(25% - 30px);
+	}
+	.wp-block-antioch-custom-blocks-icon-list.quarter .container .img-container {
+		height: 185px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list.quarter .container a:nth-of-type(4n - 1) {
+		margin-left: 40px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list.quarter .container a:nth-of-type(n + 3) {
+		margin-top: 0px;
+	}
+	.wp-block-antioch-custom-blocks-icon-list.quarter .container a:nth-of-type(n + 5) {
+		margin-top: 40px;
+	}
+	.quarter .wp-block-antioch-custom-blocks-icon-list-inner .content h3 {
+		font-size: 21px;
+	}
+	.quarter .wp-block-antioch-custom-blocks-icon-list-inner .icon-container [class*='fa'] {
+		width: 45px;
+		font-size: 45px;
+	}
+}

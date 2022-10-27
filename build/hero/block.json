@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "antioch-custom-blocks/au-hero",
+  "version": "1.0.0",
+  "title": "AU Hero",
+  "category": "custom-antioch-category",
+  "description": "Antioch Custom Hero Block",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "imageId": {
+      "type": "number",
+      "default": 0
+    },
+    "imageWidth": {
+      "type": "number"
+    },
+    "imageHeight": {
+      "type": "number"
+    },
+    "subtitle": {
+      "type": "string",
+      "source": "text",
+      "selector": "p.subtitle"
+    },
+    "title": {
+      "type": "string",
+      "source": "text",
+      "selector": "h1",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "source": "text",
+      "selector": "p.description"
+    },
+    "size": {
+      "type": "boolean",
+      "default": true
+    },
+    "letters": {
+      "type": "boolean",
+      "default": false
+    },
+    "color": {
+      "type": "string",
+      "default": "#072B31"
+    }
+  },
+  "supports": {
+    "align": [
+      "full"
+    ]
+  },
+  "textdomain": "antioch-custom-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "antioch-custom-blocks/icon-list-inner",
+	"version": "1.0.0",
+	"title": "AU Icon List Inner Block",
+	"parent": ["antioch-custom-blocks/icon-list"],
+	"category": "custom-antioch-category",
+	"description": "Antioch Custom Icon List Inner Block",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "text"
+		},
+		"icon": {
+			"type": "string",
+			"default": "fa-solid fa-icons"
+		},
+		"url": {
+			"type": "string"
+		},
+		"newtab": {
+			"type":"boolean",
+			"default": false
+		}
+	},
+	"textdomain": "antioch-custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

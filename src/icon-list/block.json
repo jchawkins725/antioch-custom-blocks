@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "antioch-custom-blocks/icon-list",
+	"version": "1.0.0",
+	"title": "AU Icon List",
+	"category": "custom-antioch-category",
+	"description": "Antioch Custom Icon List",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "text",
+			"selector": "h2.icon-list-title"
+		},
+		"columns": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"align": ["full", "wide"],
+		"color": {
+			"link": true,
+			"background": false,
+			"text": false
+		},
+		"spacing": {
+			"margin": true,  
+			"padding": true 
+		}
+	},
+	"textdomain": "antioch-custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

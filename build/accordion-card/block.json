@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "antioch-custom-blocks/accordion-card",
+  "version": "1.0.0",
+  "title": "AU Accordion Card",
+  "parent": [
+    "antioch-custom-blocks/accordion"
+  ],
+  "category": "custom-antioch-category",
+  "description": "Antioch Custom Accordion Card",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "text"
+    }
+  },
+  "textdomain": "antioch-custom-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

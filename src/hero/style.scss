@@ -1,0 +1,159 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-antioch-custom-blocks-au-hero {
+	width: 100%;
+	background-color: #072b31;
+	overflow: hidden;
+	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-black {
+	background-color: #072b31;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-green {
+	background-color: #50a684;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-orange {
+	background-color: #f68d2e;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-purple {
+	background-color: #963cbd;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-magenta {
+	background-color: #c3366f;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-light-blue {
+	background-color: #71c5e8;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-lime {
+	background-color: #b7db57;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-evergreen {
+	background-color: #7b8e47;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-light-gray {
+	background-color: #cdd0d2;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-gray {
+	background-color: #a3aaad;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-dark-gray {
+	background-color: #3c4040;
+}
+.wp-block-antioch-custom-blocks-au-hero.antioch-dark-gray,
+.wp-block-antioch-custom-blocks-au-hero.antioch-dark-gray p,
+.wp-block-antioch-custom-blocks-au-hero.antioch-magenta,
+.wp-block-antioch-custom-blocks-au-hero.antioch-magenta p,
+.wp-block-antioch-custom-blocks-au-hero.antioch-purple,
+.wp-block-antioch-custom-blocks-au-hero.antioch-purple p,
+.wp-block-antioch-custom-blocks-au-hero.antioch-green,
+.wp-block-antioch-custom-blocks-au-hero.antioch-green p,
+.wp-block-antioch-custom-blocks-au-hero.antioch-black,
+.wp-block-antioch-custom-blocks-au-hero.antioch-black p {
+	color: white;
+}
+.wp-block-antioch-custom-blocks-au-hero .bgimg,
+.wp-block-antioch-custom-blocks-au-hero .overlayimg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: 100% 33%;
+	background-size: cover;
+}
+.wp-block-antioch-custom-blocks-au-hero .overlayimg {
+	z-index: 2;
+	background-image: url(../../assets/imgoverlay.png);
+	background-position: center center;
+}
+.wp-block-antioch-custom-blocks-au-hero.smallerhero {
+	background-image: none;
+	height: 250px;
+}
+.wp-block-antioch-custom-blocks-au-hero.auletters {
+	background-image: url(../../assets/hero_letters.png);
+}
+.wp-block-antioch-custom-blocks-au-hero .container {
+	position: relative;
+	max-width: 1190px;
+	width: 100%;
+	z-index: 2;
+	padding: 3em 5.2%;
+}
+.wp-block-antioch-custom-blocks-au-hero .container .subtitle {
+	font-family: "Asap Condensed", sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	-khtml-opacity: 0.6;
+	opacity: 0.6;
+	font-size: 1.25em;
+	letter-spacing: 0em;
+	margin-bottom: 2em;
+}
+.wp-block-antioch-custom-blocks-au-hero .container h1 {
+	font-family: "Asap Condensed", sans-serif;
+	font-weight: 700;
+	margin-bottom: 0;
+	font-size: 4em;
+}
+.wp-block-antioch-custom-blocks-au-hero .container .description {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	margin-top: 0.78em;
+	width: 100%;
+	font-size: 1em;
+	margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+	.wp-block-antioch-custom-blocks-au-hero {
+		height: 400px;
+		background-position: 96% 100%;
+	}
+	.wp-block-antioch-custom-blocks-au-hero.smallerhero {
+		height: 300px;
+	}
+	.wp-block-antioch-custom-blocks-au-hero .container {
+		padding: 0 5.2%;
+	}
+	.wp-block-antioch-custom-blocks-au-hero .container .description {
+		display: block;
+		width: 48%;
+		font-size: 1.35em;
+	}
+	.wp-block-antioch-custom-blocks-au-hero .container h1 {
+		font-size: 4em;
+	}
+}
+@media only screen and (min-width: 960px) {
+	.wp-block-antioch-custom-blocks-au-hero {
+		height: 450px;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.wp-block-antioch-custom-blocks-au-hero {
+		height: 485px;
+	}
+}
+@media only screen and (min-width: 1500px) {
+	.wp-block-antioch-custom-blocks-au-hero {
+		height: 525px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.wp-block-antioch-custom-blocks-au-hero .container h1 {
+		width: 100%;
+		font-size: 2.5em;
+	}
+}

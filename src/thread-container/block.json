@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "antioch-custom-blocks/thread-container",
+	"version": "1.0.0",
+	"title": "AU Thread Container",
+	"category": "custom-antioch-category",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"thread": {
+			"type": "object",
+			"default": {
+				"name": "background-curve",
+				"initial": "M 0 0 C 30 0 47 0 100 0 L 0 0 Z",
+				"final": "M 0 0 C 30 0 47 12 100 0 L 0 0 Z",
+				"aspectRatio": "none",
+				"viewBox": "0 0 100 10",
+				"vector": "non-scaling-stroke"
+			}
+		},
+		"color": {
+			"type": "string",
+			"default": "#50A686"
+		},
+		"stroke": {
+			"type": "number",
+			"default": 17
+		}
+	},
+	"supports": {
+		"color": {
+			"background": true
+		},
+		"align": ["full"]
+	},
+	"description": "Antioch Custom Thread Container",
+	"textdomain": "antioch-custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"script": "file:./script.js"
+}

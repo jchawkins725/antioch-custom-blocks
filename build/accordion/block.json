@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "antioch-custom-blocks/accordion",
+  "version": "1.0.0",
+  "title": "AU Accordion",
+  "category": "custom-antioch-category",
+  "description": "Antioch Custom Accordion",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "text",
+      "selector": "h2.accordion-title"
+    }
+  },
+  "supports": {
+    "align": [
+      "full",
+      "wide"
+    ],
+    "color": {
+      "link": true,
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "antioch-custom-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "script": "file:./script.js"
+}

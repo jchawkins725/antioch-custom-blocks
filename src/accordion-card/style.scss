@@ -1,0 +1,64 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-antioch-custom-blocks-accordion-card .card-header {
+	background: none;
+	border-bottom: none;
+	padding: 0;
+}
+.wp-block-antioch-custom-blocks-accordion-card button {
+	align-items: center;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #c5c5c5;
+	color: #000;
+	display: flex;
+	justify-content: space-between;
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+	text-align: left;
+	transition: border-color 0.5s;
+	width: 100%;
+    cursor: pointer;
+}
+.wp-block-antioch-custom-blocks-accordion-card button.open {
+    border-color: transparent;
+}
+.wp-block-antioch-custom-blocks-accordion-card .card-header h3 {
+	font-size: 2em;
+	font-weight: 700;
+    line-height: 1em;
+    margin: 0;
+}
+.wp-block-antioch-custom-blocks-accordion-card .card-body {
+    border-bottom: 2px solid #ababab;
+    padding: 1rem .5rem;
+}
+.wp-block-antioch-custom-blocks-accordion-card button.open svg {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s,-webkit-transform .5s;
+}
+.wp-block-antioch-custom-blocks-accordion-card button svg {
+	font-size: 22px;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s,-webkit-transform .5s;
+}
+.wp-block-antioch-custom-blocks-accordion-card .card-body h4 {
+	margin-top: 0px;
+    font-size: 24px;
+}
+.wp-block-antioch-custom-blocks-accordion-card .collapse:not(.show) {
+    display: none;
+}
+.wp-block-antioch-custom-blocks-accordion-card .collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}
