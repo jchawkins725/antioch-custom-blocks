@@ -11,8 +11,17 @@
 		"title": {
 			"type": "string",
 			"source": "text"
+		},
+		"color": {
+			"type": "string",
+			"default": "#072b31"
+		},
+		"icon": {
+			"type": "string",
+			"default": "fa-regular fa-chevron-down"
 		}
 	},
+	"usesContext": ["headingColors","icons"],
 	"textdomain": "antioch-custom-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

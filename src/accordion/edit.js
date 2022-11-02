@@ -15,7 +15,11 @@ import {
 	useBlockProps,
 	InnerBlocks,
 	RichText,
+	InspectorControls,
 } from "@wordpress/block-editor";
+import { PanelBody, ColorPalette, TextControl } from "@wordpress/components";
+import theme from "../../../../themes/antioch-block-theme/theme.json";
+
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -37,6 +41,30 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<section {...blockProps}>
 			{/* Sidebar Controls */}
+			<InspectorControls>
+				<PanelBody title={__("Accordion Title Color")}>
+					<ColorPalette
+						value={attributes.color}
+						colors={theme.settings.color.palette}
+						onChange={(color) => setAttributes({ color })}
+					/>
+				</PanelBody>
+				<PanelBody title={__("Accordion Header Colors")}>
+					<ColorPalette
+						value={attributes.headers}
+						colors={theme.settings.color.palette}
+						onChange={(headers) => setAttributes({ headers })}
+					/>
+				</PanelBody>
+				<PanelBody title={__("Accordion Icon Options")}>
+					<TextControl
+						label="Font Awesome Class"
+						value={attributes.icon}
+						onChange={(icon) => setAttributes({ icon })}
+						help="Enter only the class from Font Awesome i.e. 'fa-regular fa-chevron-down'"
+					/>
+				</PanelBody>
+			</InspectorControls>
 			{/* Block Content */}
 			<RichText
 				tagName="h2"
@@ -44,11 +72,13 @@ export default function Edit({ attributes, setAttributes }) {
 				value={attributes.title}
 				placeholder="Enter optional title"
 				className={"accordion-title"}
+				style={{ color: attributes.color }}
 			/>
 			<div className="accordion">
 				<InnerBlocks
 					allowedBlocks={["antioch-custom-blocks/accordion-card"]}
 					template={[["antioch-custom-blocks/accordion-card"]]}
+					headingColors={attributes.headers}
 				/>
 			</div>
 		</section>

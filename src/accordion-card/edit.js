@@ -29,8 +29,9 @@ import "./editor.scss";
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit({ attributes, setAttributes }) {
+export default function Edit({ attributes, setAttributes, context }) {
 	const blockProps = useBlockProps();
+	setAttributes({color: context["headingColors"],icon: context["icons"]});
 	return (
 		<div {...blockProps}>
 			{/* Sidebar Controls */}
@@ -44,8 +45,14 @@ export default function Edit({ attributes, setAttributes }) {
 						placeholder="Enter Card Header"
 						className={"accordion-card-header"}
 						allowedFormats={["core/bold", "core/italic"]}
+						style={{ color: attributes.color }}
 					/>
-					<i className="fa-regular fa-chevron-down"></i>
+					<span
+					dangerouslySetInnerHTML=
+					{{
+						__html: `<i class="${attributes.icon ? attributes.icon : "fa-regular fa-chevron-down"}" style="color:${attributes.color}"></i>`,
+					}}>
+					</span>
 				</button>
 			</div>
 			<div className="accordion-collapse collapse show">

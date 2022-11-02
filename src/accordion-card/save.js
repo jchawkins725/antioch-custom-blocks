@@ -31,8 +31,9 @@ export default function save({ attributes }) {
 						tagName="h3"
 						value={attributes.title}
 						className={"accordion-card-header"}
+						style={{ color: attributes.color }}
 					/>
-					<i className="fa-regular fa-chevron-down"></i>
+					<i class={attributes.icon ? attributes.icon : "fa-regular fa-chevron-down"} style={{color:attributes.color}}></i>
 				</button>
 			</div>
 			<div className="accordion-collapse collapse">

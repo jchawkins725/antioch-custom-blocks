@@ -55,9 +55,14 @@ __webpack_require__.r(__webpack_exports__);
 function Edit(_ref) {
   let {
     attributes,
-    setAttributes
+    setAttributes,
+    context
   } = _ref;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
+  setAttributes({
+    color: context["headingColors"],
+    icon: context["icons"]
+  });
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "card-header"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
@@ -68,9 +73,14 @@ function Edit(_ref) {
     value: attributes.title,
     placeholder: "Enter Card Header",
     className: "accordion-card-header",
-    allowedFormats: ["core/bold", "core/italic"]
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "fa-regular fa-chevron-down"
+    allowedFormats: ["core/bold", "core/italic"],
+    style: {
+      color: attributes.color
+    }
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
+    dangerouslySetInnerHTML: {
+      __html: `<i class="${attributes.icon ? attributes.icon : "fa-regular fa-chevron-down"}" style="color:${attributes.color}"></i>`
+    }
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "accordion-collapse collapse show"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -203,9 +213,15 @@ function save(_ref) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
     tagName: "h3",
     value: attributes.title,
-    className: "accordion-card-header"
+    className: "accordion-card-header",
+    style: {
+      color: attributes.color
+    }
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "fa-regular fa-chevron-down"
+    class: attributes.icon ? attributes.icon : "fa-regular fa-chevron-down",
+    style: {
+      color: attributes.color
+    }
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "accordion-collapse collapse"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -285,7 +301,7 @@ module.exports = window["wp"]["i18n"];
   \***************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"antioch-custom-blocks/accordion-card","version":"1.0.0","title":"AU Accordion Card","parent":["antioch-custom-blocks/accordion"],"category":"custom-antioch-category","description":"Antioch Custom Accordion Card","attributes":{"title":{"type":"string","source":"text"}},"textdomain":"antioch-custom-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"antioch-custom-blocks/accordion-card","version":"1.0.0","title":"AU Accordion Card","parent":["antioch-custom-blocks/accordion"],"category":"custom-antioch-category","description":"Antioch Custom Accordion Card","attributes":{"title":{"type":"string","source":"text"},"color":{"type":"string","default":"#072b31"},"icon":{"type":"string","default":"fa-regular fa-chevron-down"}},"usesContext":["headingColors","icons"],"textdomain":"antioch-custom-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

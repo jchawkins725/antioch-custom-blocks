@@ -11,7 +11,23 @@
       "type": "string",
       "source": "text",
       "selector": "h2.accordion-title"
+    },
+    "color": {
+      "type": "string",
+      "default": "#072b31"
+    },
+    "headers": {
+      "type": "string",
+      "default": "#072b31"
+    },
+    "icon": {
+      "type": "string",
+      "default": "fa-regular fa-chevron-down"
     }
+  },
+  "providesContext": {
+    "headingColors": "headers",
+    "icons": "icon"
   },
   "supports": {
     "align": [
@@ -19,9 +35,9 @@
       "wide"
     ],
     "color": {
-      "link": true,
+      "link": false,
       "background": true,
-      "text": true
+      "text": false
     },
     "spacing": {
       "margin": true,

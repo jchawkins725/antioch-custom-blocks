@@ -18,7 +18,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/accordion/editor.scss");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _themes_antioch_block_theme_theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../themes/antioch-block-theme/theme.json */ "../../themes/antioch-block-theme/theme.json");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editor.scss */ "./src/accordion/editor.scss");
 
 
 /**
@@ -33,6 +36,8 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
+
+
 
 
 /**
@@ -58,19 +63,48 @@ function Edit(_ref) {
     setAttributes
   } = _ref;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Accordion Title Color")
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
+    value: attributes.color,
+    colors: _themes_antioch_block_theme_theme_json__WEBPACK_IMPORTED_MODULE_4__.settings.color.palette,
+    onChange: color => setAttributes({
+      color
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Accordion Header Colors")
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
+    value: attributes.headers,
+    colors: _themes_antioch_block_theme_theme_json__WEBPACK_IMPORTED_MODULE_4__.settings.color.palette,
+    onChange: headers => setAttributes({
+      headers
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Accordion Icon Options")
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
+    label: "Font Awesome Class",
+    value: attributes.icon,
+    onChange: icon => setAttributes({
+      icon
+    }),
+    help: "Enter only the class from Font Awesome i.e. 'fa-regular fa-chevron-down'"
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "h2",
     onChange: title => setAttributes({
       title
     }),
     value: attributes.title,
     placeholder: "Enter optional title",
-    className: "accordion-title"
+    className: "accordion-title",
+    style: {
+      color: attributes.color
+    }
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "accordion"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
     allowedBlocks: ["antioch-custom-blocks/accordion-card"],
-    template: [["antioch-custom-blocks/accordion-card"]]
+    template: [["antioch-custom-blocks/accordion-card"]],
+    headingColors: attributes.headers
   })));
 }
 
@@ -195,7 +229,10 @@ function save(_ref) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", blockProps, attributes.title && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
     tagName: "h2",
     value: attributes.title,
-    className: "accordion-title"
+    className: "accordion-title",
+    style: {
+      color: attributes.color
+    }
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "accordion"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null)));
@@ -247,6 +284,16 @@ module.exports = window["wp"]["blocks"];
 
 /***/ }),
 
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ (function(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -273,7 +320,17 @@ module.exports = window["wp"]["i18n"];
   \**********************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"antioch-custom-blocks/accordion","version":"1.0.0","title":"AU Accordion","category":"custom-antioch-category","description":"Antioch Custom Accordion","attributes":{"title":{"type":"string","source":"text","selector":"h2.accordion-title"}},"supports":{"align":["full","wide"],"color":{"link":true,"background":true,"text":true},"spacing":{"margin":true,"padding":true}},"textdomain":"antioch-custom-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./script.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"antioch-custom-blocks/accordion","version":"1.0.0","title":"AU Accordion","category":"custom-antioch-category","description":"Antioch Custom Accordion","attributes":{"title":{"type":"string","source":"text","selector":"h2.accordion-title"},"color":{"type":"string","default":"#072b31"},"headers":{"type":"string","default":"#072b31"},"icon":{"type":"string","default":"fa-regular fa-chevron-down"}},"providesContext":{"headingColors":"headers","icons":"icon"},"supports":{"align":["full","wide"],"color":{"link":false,"background":true,"text":false},"spacing":{"margin":true,"padding":true}},"textdomain":"antioch-custom-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./script.js"}');
+
+/***/ }),
+
+/***/ "../../themes/antioch-block-theme/theme.json":
+/*!***************************************************!*\
+  !*** ../../themes/antioch-block-theme/theme.json ***!
+  \***************************************************/
+/***/ (function(module) {
+
+module.exports = JSON.parse('{"version":2,"settings":{"appearanceTools":true,"color":{"defaultPalette":false,"palette":[{"name":"Primary Gray","slug":"primary-gray","color":"#072B31"},{"name":"Primary Green","slug":"primary-green","color":"#50A684"},{"name":"Secondary Orange","slug":"secondary-orange","color":"#F68D2E"},{"name":"Secondary Purple","slug":"secondary-purple","color":"#963CBD"},{"name":"Secondary Gray","slug":"secondary-gray","color":"#A3AAAD"},{"name":"Secondary Pink","slug":"secondary-pink","color":"#C3366F"},{"name":"Secondary Blue","slug":"secondary-blue","color":"#71C5E8"},{"name":"Secondary Yellow","slug":"secondary-yellow","color":"#B7DB57"},{"name":"Off White","slug":"off-white","color":"#E7EDEE"},{"name":"White","slug":"white","color":"#FFFFFF"}]},"custom":{"spacing":{"small":"max(1.25rem, 5vw)","medium":"clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))","large":"clamp(4rem, 10vw, 8rem)","outer":"var(--wp--custom--spacing--small, 1.25rem)"},"typography":{"font-size":{"huge":"3em","gigantic":"3.5em","colossal":"4em"}}},"spacing":{"blockGap":true},"typography":{"fontFamilies":[{"fontFamily":"\\"Asap Condensed\\", sans-serif","name":"Asap Condensed","slug":"asap-condensed","fontFace":[{"fontFamily":"Asap Condensed","fontWeight":"400","fontStyle":"normal","fontStretch":"normal","src":["file:./assets/fonts/Asap_Condensed/AsapCondensed-Regular.ttf"]},{"fontFamily":"Asap Condensed","fontWeight":"700","fontStyle":"normal","fontStretch":"normal","src":["file:./assets/fonts/Asap_Condensed/AsapCondensed-Bold.ttf"]}]},{"fontFamily":"\\"Open Sans\\", sans-serif","name":"Open Sans","slug":"open-sans","fontFace":[{"fontFamily":"Open Sans","fontWeight":"400","fontStyle":"normal","fontStretch":"normal","src":["file:./assets/fonts/OpenSans/OpenSans-Regular.ttf"]},{"fontFamily":"Open Sans","fontWeight":"400","fontStyle":"italic","fontStretch":"normal","src":["file:./assets/fonts/OpenSans/OpenSans-Italic.ttf"]},{"fontFamily":"Open Sans","fontWeight":"700","fontStyle":"normal","fontStretch":"normal","src":["file:./assets/fonts/OpenSans/OpenSans-Bold.ttf"]},{"fontFamily":"Open Sans","fontWeight":"700","fontStyle":"italic","fontStretch":"normal","src":["file:./assets/fonts/OpenSans/OpenSans-BoldItalic.ttf"]},{"fontFamily":"Open Sans","fontWeight":"800","fontStyle":"normal","fontStretch":"normal","src":["file:./assets/fonts/OpenSans/OpenSans-ExtraBold.ttf"]}]}],"fontSizes":[{"size":".9em","slug":"small"},{"size":"1.1em","slug":"medium"},{"size":"1.5em","slug":"large"},{"size":"2em","slug":"x-large"},{"size":"2.5em","slug":"xx-large"}]},"layout":{"contentSize":"770px","wideSize":"1190px"}},"styles":{"typography":{"fontFamily":"var(--wp--preset--font-family--open-sans)"},"blocks":{"core/button":{"color":{"background":"var(--wp--preset--color--primary-green)","text":"var(--wp--preset--color--white)"},"border":{"radius":"0px"},"typography":{"textTransform":"uppercase","fontFamily":"var(--wp--preset--font-family--asap-condensed)","fontSize":"var(--wp--preset--font-size--medium)","fontWeight":"700"},"spacing":{"padding":"0.95em 1.7em"}}},"elements":{"h1":{"typography":{"fontFamily":"var(--wp--preset--font-family--asap-condensed)","fontWeight":"700","fontSize":"var(--wp--custom--typography--font-size--colossal)"}},"h2":{"typography":{"fontFamily":"var(--wp--preset--font-family--asap-condensed)","fontWeight":"700","fontSize":"var(--wp--custom--typography--font-size--gigantic)"},"color":{"text":"var(--wp--preset--color--primary-gray)"}},"h3":{"typography":{"fontFamily":"var(--wp--preset--font-family--asap-condensed)","fontWeight":"700","fontSize":"var(--wp--custom--typography--font-size--huge)"},"color":{"text":"var(--wp--preset--color--primary-gray)"}},"h4":{"typography":{"fontFamily":"var(--wp--preset--font-family--asap-condensed)","fontWeight":"700","fontSize":"var(--wp--preset--font-size--xx-large)"},"color":{"text":"var(--wp--preset--color--primary-gray)"}},"h5":{"typography":{"fontFamily":"var(--wp--preset--font-family--asap-condensed)","fontWeight":"700","fontSize":"var(--wp--preset--font-size--x-large)"},"color":{"text":"var(--wp--preset--color--primary-gray)"}},"h6":{"typography":{"fontFamily":"var(--wp--preset--font-family--asap-condensed)","fontWeight":"700","fontSize":"var(--wp--preset--font-size--large)"},"color":{"text":"var(--wp--preset--color--primary-gray)"}},"p":{"typography":{"fontFamily":"var(--wp--preset--font-family--open-sans)","fontWeight":"400","fontSize":"var(--wp--preset--font-size--medium)"},"color":{"text":"var(--wp--preset--color--primary-gray)"}},"link":{"color":{"text":"var(--wp--preset--color--primary-green)"}}},"spacing":{"blockGap":"1.5rem"}},"customTemplates":{},"templateParts":{}}');
 
 /***/ })
 

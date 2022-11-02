@@ -30,6 +30,7 @@ export default function save({ attributes }) {
 					tagName="h2"
 					value={attributes.title}
 					className={"accordion-title"}
+					style={{color: attributes.color}}
 				/>
 			)}
 			<div className="accordion">
