@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "antioch-custom-blocks/sticky-anchor-links",
+	"version": "1.0.0",
+	"title": "AU Sticky Anchor Links",
+	"category": "custom-antioch-category",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	},
+	"supports": {
+		"color": {
+			"background": true,
+			"link": true,
+			"text": false
+		},
+		"typography": {
+			"fontSize": true
+		},
+		"align": ["full"]
+	},
+	"description": "Antioch Custom Sticky Anchor Links",
+	"textdomain": "antioch-custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"script": "file:./script.js"
+}

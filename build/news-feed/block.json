@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "antioch-custom-blocks/news-feed",
+  "version": "1.0.0",
+  "title": "AU News Feed",
+  "category": "custom-antioch-category",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    }
+  },
+  "supports": {
+    "color": {
+      "background": true
+    },
+    "align": [
+      "wide"
+    ]
+  },
+  "description": "Antioch Custom News Feed",
+  "textdomain": "antioch-custom-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "script": "file:./script.js"
+}

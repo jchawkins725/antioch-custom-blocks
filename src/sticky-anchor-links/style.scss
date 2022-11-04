@@ -1,0 +1,59 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ html {
+	scroll-behavior: smooth;
+}
+@media (max-width: 959px) {
+  .wp-block-antioch-custom-blocks-sticky-anchor-links {
+    display: none;
+  }
+}
+.wp-block-antioch-custom-blocks-sticky-anchor-links {
+  width: calc(100% - 2.6rem) !important;
+  z-index: 3;
+  position: absolute;
+  margin-top: -1.5rem !important;  
+  padding: 0rem 1.3rem;
+  background: #4DA689;
+  box-shadow: 0 0 .6rem -0.2rem rgb(0 0 0 / 20%);
+}
+.wp-block-antioch-custom-blocks-sticky-anchor-links.sticky {
+  position: fixed;
+  margin-top: 0 !important;
+}
+.wp-block-aioseo-table-of-contents > ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.wp-block-antioch-custom-blocks-sticky-anchor-links ul {
+  margin: 0px;
+}
+.wp-block-antioch-custom-blocks-sticky-anchor-links li {
+  list-style-type: none;
+  margin: 0px 30px 0px 0px;
+  display: inline-block;
+}
+.wp-block-antioch-custom-blocks-sticky-anchor-links a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: .7rem 0;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  border-bottom: solid 2px rgba(255,255,255,0);
+  transition: all .5s;
+}
+.wp-block-aioseo-table-of-contents a.active {
+  border-bottom: solid 2px rgba(255,255,255,1);
+}
+.wp-block-aioseo-table-of-contents a:hover {
+  border-bottom: solid 2px rgba(255,255,255,1);
+  background-color: transparent;
+  color:white;
+}

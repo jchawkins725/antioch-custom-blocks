@@ -68,7 +68,9 @@ export default function Edit({ attributes, setAttributes, context }) {
 							"core/buttons",
 							"core/separator",
 							"core/spacer",
+							"core/shortcode"
 						]}
+						template={[['core/paragraph', {placeholder: 'Type / to choose a block'}]]}
 					/>
 				</div>
 			</div>

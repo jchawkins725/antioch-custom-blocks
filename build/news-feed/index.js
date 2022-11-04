@@ -2,63 +2,9 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/themecolors.js":
+/***/ "./src/news-feed/edit.js":
 /*!*******************************!*\
-  !*** ./assets/themecolors.js ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "theme": function() { return /* binding */ theme; }
-/* harmony export */ });
-const theme = [{
-  name: "Primary Gray",
-  slug: "primary-gray",
-  color: "#072B31"
-}, {
-  name: "Primary Green",
-  slug: "primary-green",
-  color: "#50A684"
-}, {
-  name: "Secondary Orange",
-  slug: "secondary-orange",
-  color: "#F68D2E"
-}, {
-  name: "Secondary Purple",
-  slug: "secondary-purple",
-  color: "#963CBD"
-}, {
-  name: "Secondary Gray",
-  slug: "secondary-gray",
-  color: "#A3AAAD"
-}, {
-  name: "Secondary Pink",
-  slug: "secondary-pink",
-  color: "#C3366F"
-}, {
-  name: "Secondary Blue",
-  slug: "secondary-blue",
-  color: "#71C5E8"
-}, {
-  name: "Secondary Yellow",
-  slug: "secondary-yellow",
-  color: "#B7DB57"
-}, {
-  name: "Off White",
-  slug: "off-white",
-  color: "#E7EDEE"
-}, {
-  name: "White",
-  slug: "white",
-  color: "#FFFFFF"
-}];
-
-/***/ }),
-
-/***/ "./src/accordion/edit.js":
-/*!*******************************!*\
-  !*** ./src/accordion/edit.js ***!
+  !*** ./src/news-feed/edit.js ***!
   \*******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -72,10 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_themecolors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/themecolors */ "./assets/themecolors.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editor.scss */ "./src/accordion/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/news-feed/editor.scss");
 
 
 /**
@@ -90,8 +33,6 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-
-
 
 
 /**
@@ -117,56 +58,22 @@ function Edit(_ref) {
     setAttributes
   } = _ref;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Accordion Title Color")
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
-    value: attributes.color,
-    colors: _assets_themecolors__WEBPACK_IMPORTED_MODULE_4__.theme,
-    onChange: color => setAttributes({
-      color
-    })
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Accordion Header Colors")
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
-    value: attributes.headers,
-    colors: _assets_themecolors__WEBPACK_IMPORTED_MODULE_4__.theme,
-    onChange: headers => setAttributes({
-      headers
-    })
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Accordion Icon Options")
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
-    label: "Font Awesome Class",
-    value: attributes.icon,
-    onChange: icon => setAttributes({
-      icon
-    }),
-    help: "Enter only the class from Font Awesome i.e. 'fa-regular fa-chevron-down'"
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-    tagName: "h2",
-    onChange: title => setAttributes({
-      title
-    }),
-    value: attributes.title,
-    placeholder: "Enter optional title",
-    className: "accordion-title",
-    style: {
-      color: attributes.color
-    }
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "accordion"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
-    allowedBlocks: ["antioch-custom-blocks/accordion-card"],
-    template: [["antioch-custom-blocks/accordion-card"]],
-    headingColors: attributes.headers
-  })));
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
+    template: [["feedzy-rss-feeds/feedzy-block", {
+      feeds: "https://commonthread.antioch.edu/feed/",
+      max: 3,
+      metafields: "no",
+      feed_title: false,
+      summary: false
+    }]]
+  }));
 }
 
 /***/ }),
 
-/***/ "./src/accordion/index.js":
+/***/ "./src/news-feed/index.js":
 /*!********************************!*\
-  !*** ./src/accordion/index.js ***!
+  !*** ./src/news-feed/index.js ***!
   \********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -175,10 +82,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./src/accordion/style.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/accordion/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/accordion/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./block.json */ "./src/accordion/block.json");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./src/news-feed/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/news-feed/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/news-feed/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./block.json */ "./src/news-feed/block.json");
 
 
 /**
@@ -214,9 +121,9 @@ __webpack_require__.r(__webpack_exports__);
     foreground: "#50a684",
     src: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
       xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 512 512"
+      viewBox: "0 0 448 512"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
-      d: "M512 224c0-35.3-28.7-64-64-64L64 160c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-224zM440 80L72 80c-13.3 0-24 10.7-24 24s10.7 24 24 24l368 0c13.3 0 24-10.7 24-24s-10.7-24-24-24zM392 0L120 0C106.7 0 96 10.7 96 24s10.7 24 24 24l272 0c13.3 0 24-10.7 24-24s-10.7-24-24-24z"
+      d: "M25 32.05C12.05 31.18 .5833 41.77 .0208 55.02c-.5469 13.25 9.734 24.44 22.98 24.97C222.5 88.36 391.7 257.5 400 457C400.6 469.9 411.2 480 423.1 480c.3438 0 .6718 0 1.016-.0313c13.25-.5312 23.53-11.72 22.98-24.97C438.6 231.1 248.9 41.39 25 32.05zM25.57 176.1c-13.16-.7187-24.66 9.156-25.51 22.37C-.8071 211.7 9.223 223.1 22.44 223.9c120.1 7.875 225.7 112.7 233.6 233.6C256.9 470.3 267.4 480 279.1 480c.5313 0 1.062-.0313 1.594-.0625c13.22-.8437 23.25-12.28 22.39-25.5C294.6 310.3 169.7 185.4 25.57 176.1zM63.1 351.9c-16.38 0-32.75 6.314-45.25 18.81c-24.99 24.99-24.99 65.51 0 90.5C31.25 473.8 47.62 480 63.1 480s32.76-6.25 45.26-18.75c24.99-24.99 24.99-65.51 0-90.5C96.76 358.3 80.38 351.9 63.1 351.9zM75.32 427.3c-4.078 4.078-8.838 4.687-11.31 4.687s-7.234-.6093-11.31-4.687c-4.076-4.078-4.685-8.836-4.685-11.31c0-2.476 .6094-7.234 4.687-11.31c4.078-4.078 8.838-4.687 11.31-4.687s7.234 .6093 11.31 4.687c4.078 4.078 4.685 8.836 4.685 11.31C80 418.5 79.4 423.2 75.32 427.3z"
     }))
   },
 
@@ -233,9 +140,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/accordion/save.js":
+/***/ "./src/news-feed/save.js":
 /*!*******************************!*\
-  !*** ./src/accordion/save.js ***!
+  !*** ./src/news-feed/save.js ***!
   \*******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -280,23 +187,14 @@ function save(_ref) {
     attributes
   } = _ref;
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save();
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", blockProps, attributes.title && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
-    tagName: "h2",
-    value: attributes.title,
-    className: "accordion-title",
-    style: {
-      color: attributes.color
-    }
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "accordion"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null)));
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null));
 }
 
 /***/ }),
 
-/***/ "./src/accordion/editor.scss":
+/***/ "./src/news-feed/editor.scss":
 /*!***********************************!*\
-  !*** ./src/accordion/editor.scss ***!
+  !*** ./src/news-feed/editor.scss ***!
   \***********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -306,9 +204,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/accordion/style.scss":
+/***/ "./src/news-feed/style.scss":
 /*!**********************************!*\
-  !*** ./src/accordion/style.scss ***!
+  !*** ./src/news-feed/style.scss ***!
   \**********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -338,16 +236,6 @@ module.exports = window["wp"]["blocks"];
 
 /***/ }),
 
-/***/ "@wordpress/components":
-/*!************************************!*\
-  !*** external ["wp","components"] ***!
-  \************************************/
-/***/ (function(module) {
-
-module.exports = window["wp"]["components"];
-
-/***/ }),
-
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -368,13 +256,13 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
-/***/ "./src/accordion/block.json":
+/***/ "./src/news-feed/block.json":
 /*!**********************************!*\
-  !*** ./src/accordion/block.json ***!
+  !*** ./src/news-feed/block.json ***!
   \**********************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"antioch-custom-blocks/accordion","version":"1.0.0","title":"AU Accordion","category":"custom-antioch-category","description":"Antioch Custom Accordion","attributes":{"title":{"type":"string","source":"text","selector":"h2.accordion-title"},"color":{"type":"string","default":"#072b31"},"headers":{"type":"string","default":"#072b31"},"icon":{"type":"string","default":"fa-regular fa-chevron-down"}},"providesContext":{"headingColors":"headers","icons":"icon"},"supports":{"align":["full","wide"],"color":{"link":false,"background":true,"text":false},"spacing":{"margin":true,"padding":true}},"textdomain":"antioch-custom-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./script.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"antioch-custom-blocks/news-feed","version":"1.0.0","title":"AU News Feed","category":"custom-antioch-category","attributes":{"align":{"type":"string","default":"wide"}},"supports":{"color":{"background":true},"align":["wide"]},"description":"Antioch Custom News Feed","textdomain":"antioch-custom-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./script.js"}');
 
 /***/ })
 
@@ -490,8 +378,8 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"accordion/index": 0,
-/******/ 			"accordion/style-index": 0
+/******/ 			"news-feed/index": 0,
+/******/ 			"news-feed/style-index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -543,7 +431,7 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["accordion/style-index"], function() { return __webpack_require__("./src/accordion/index.js"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["news-feed/style-index"], function() { return __webpack_require__("./src/news-feed/index.js"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

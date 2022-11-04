@@ -1,0 +1,66 @@
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/news-feed/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-antioch-custom-blocks-news-feed a {
+  position: static;
+  text-decoration: none;
+  padding: 0px;
+}
+
+.wp-block-antioch-custom-blocks-news-feed li {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  box-shadow: 0px 3px 6px #d6d6d6;
+  padding: 0px !important;
+  background: #50a684;
+}
+
+.wp-block-antioch-custom-blocks-news-feed .feedzy-rss .rss_item {
+  border-bottom: none;
+}
+
+.wp-block-antioch-custom-blocks-news-feed .feedzy-rss .rss_item .rss_image {
+  width: 100% !important;
+  margin: 0px;
+}
+
+.wp-block-antioch-custom-blocks-news-feed .feedzy-rss .rss_item .title {
+  width: 100%;
+}
+
+.wp-block-antioch-custom-blocks-news-feed .feedzy-rss .rss_item .title a {
+  padding: 20px;
+  display: block;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2em;
+  color: white;
+}
+
+.wp-block-antioch-custom-blocks-news-feed .feedzy-rss .rss_item .title a:hover:after {
+  width: auto;
+}
+
+.wp-block-antioch-custom-blocks-news-feed .feedzy-rss .rss_item .title a:after {
+  content: "Read More →";
+  font-size: 20px;
+  margin-top: 10px;
+  display: block;
+  text-align: right;
+}
+
+@media (min-width: 900px) {
+  .wp-block-antioch-custom-blocks-news-feed ul {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

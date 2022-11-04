@@ -10,4 +10,8 @@
   outline: dotted rgba(80, 166, 132, 0.3882352941) 3px;
 }
 
+.wp-block-antioch-custom-blocks-accordion-card button {
+  border-bottom: 1px solid #dedede;
+}
+
 /*# sourceMappingURL=index.css.map*/

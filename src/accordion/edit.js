@@ -18,7 +18,7 @@ import {
 	InspectorControls,
 } from "@wordpress/block-editor";
 import { PanelBody, ColorPalette, TextControl } from "@wordpress/components";
-import theme from "../../../../themes/antioch-block-theme/theme.json";
+import { theme } from "../../assets/themecolors";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -45,14 +45,14 @@ export default function Edit({ attributes, setAttributes }) {
 				<PanelBody title={__("Accordion Title Color")}>
 					<ColorPalette
 						value={attributes.color}
-						colors={theme.settings.color.palette}
+						colors={theme}
 						onChange={(color) => setAttributes({ color })}
 					/>
 				</PanelBody>
 				<PanelBody title={__("Accordion Header Colors")}>
 					<ColorPalette
 						value={attributes.headers}
-						colors={theme.settings.color.palette}
+						colors={theme}
 						onChange={(headers) => setAttributes({ headers })}
 					/>
 				</PanelBody>

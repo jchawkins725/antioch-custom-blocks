@@ -27,5 +27,7 @@ function create_block_antioch_custom_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/thread-container' );
 	register_block_type( __DIR__ . '/build/accordion' );
 	register_block_type( __DIR__ . '/build/accordion-card' );
+	register_block_type( __DIR__ . '/build/sticky-anchor-links' );
+	register_block_type( __DIR__ . '/build/news-feed' );
 }
 add_action( 'init', 'create_block_antioch_custom_blocks_block_init' );

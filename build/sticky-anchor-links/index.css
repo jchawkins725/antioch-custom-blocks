@@ -1,0 +1,32 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/sticky-anchor-links/editor.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.editor-styles-wrapper .wp-block-antioch-custom-blocks-sticky-anchor-links a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 0.7rem 0;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  border-bottom: solid 2px rgba(255, 255, 255, 0);
+  transition: all 0.5s;
+}
+
+.editor-styles-wrapper .wp-block-antioch-custom-blocks-sticky-anchor-links ul {
+  margin: 0px;
+}
+
+.editor-styles-wrapper .wp-block-antioch-custom-blocks-sticky-anchor-links li {
+  list-style-type: none;
+  margin: 0px 30px 0px 0px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=index.css.map*/

@@ -86,7 +86,10 @@ function Edit(_ref) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "card-body"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
-    allowedBlocks: ["core/paragraph", "core/heading", "core/table", "core/image", "core/video", "core/file", "core/buttons", "core/separator", "core/spacer"]
+    allowedBlocks: ["core/paragraph", "core/heading", "core/table", "core/image", "core/video", "core/file", "core/buttons", "core/separator", "core/spacer", "core/shortcode"],
+    template: [['core/paragraph', {
+      placeholder: 'Type / to choose a block'
+    }]]
   }))));
 }
 

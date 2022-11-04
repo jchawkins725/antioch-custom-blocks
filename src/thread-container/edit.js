@@ -22,7 +22,7 @@ import {
 	FontSizePicker,
 } from "@wordpress/components";
 import { threads } from "./threads";
-import theme from "../../../../themes/antioch-block-theme/theme.json";
+import { theme } from "../../assets/themecolors";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -111,7 +111,7 @@ export default function Edit({ attributes, setAttributes }) {
 					</p>
 					<ColorPalette
 						value={attributes.color}
-						colors={theme.settings.color.palette}
+						colors={theme}
 						onChange={(color) => setAttributes({ color })}
 					/>
 				</PanelBody>
